@@ -1,1 +1,1 @@
-# computer-vision-sanda-analytics
+# computer-vision-sports-analytics
