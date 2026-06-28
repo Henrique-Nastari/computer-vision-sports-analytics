@@ -1,0 +1,30 @@
+name: soccer-cv
+channels:
+  - pytorch
+  - nvidia
+  - conda-forge
+  - defaults
+dependencies:
+  - python>=3.12
+  - pytorch>=2.7.0
+  - torchvision
+  - torchaudio
+  - pytorch-cuda>=12.1  # Versão estável do CUDA para PyTorch
+  - opencv>=4.9
+  - numpy
+  - pydantic>=2.0.0
+  - pydantic-settings
+  - sqlalchemy
+  - alembic
+  - pip
+  - pip:
+      - fastapi>=0.100.0
+      - uvicorn[standard]>=0.22.0
+      - celery
+      - redis
+      - psycopg2-binary
+      - python-multipart
+      - websockets
+      - ultralytics>=8.3
+      - ffmpeg-python
+      - albumentations

@@ -1,0 +1,20 @@
+fastapi>=0.100.0
+uvicorn[standard]>=0.22.0
+pydantic>=2.0.0
+pydantic-settings
+celery
+redis
+SQLAlchemy
+psycopg2-binary
+alembic
+python-multipart
+websockets
+
+# Machine Learning & Computer Vision (Local)
+torch>=2.7.0
+torchvision
+ultralytics>=8.3
+opencv-python>=4.9
+ffmpeg-python
+albumentations
+numpy
