@@ -111,67 +111,12 @@ export default function Home() {
               muted 
               className="main-video"
             >
-              <source src="/videos/futebol_rastreado_h264.mp4" type="video/mp4" />
-              Seu navegador não suporta vídeos HTML5.
+              <source src="/videos/futebol_cv_tracking_h264.mp4" type="video/mp4" />
+              Seu navegador não suporta a tag de vídeo.
             </video>
           </div>
         </section>
 
-        {/* Sidebar / Minimap */}
-        <aside className="sidebar-section">
-          <div className="minimap-panel glass-panel">
-            <header className="panel-header" style={{flexDirection: 'column', alignItems: 'flex-start', gap: '10px'}}>
-              <div style={{display: 'flex', justifyContent: 'space-between', width: '100%'}}>
-                <h2>Tactical Radar</h2>
-              </div>
-              <div className="search-box">
-                <input 
-                  type="text" 
-                  placeholder="Buscar jogador (ex: Neymar)..." 
-                  value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
-                  className="player-search-input"
-                />
-              </div>
-            </header>
-            <div className="minimap-placeholder">
-              <div className="pitch-lines">
-                <div className="center-circle"></div>
-                <div className="half-way-line"></div>
-              </div>
-              <svg className="trajectory-layer" viewBox="0 0 100 100" preserveAspectRatio="none" style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', zIndex: 10 }}>
-                {playerTrajectory && (
-                  <polyline 
-                    points={playerTrajectory.map(pt => `${pt.x},${pt.y}`).join(' ')} 
-                    fill="none" 
-                    stroke="#00e5ff" 
-                    strokeWidth="1" 
-                    strokeDasharray="2"
-                  />
-                )}
-                {playerTrajectory && playerTrajectory.map((pt, idx) => (
-                  <circle key={idx} cx={pt.x} cy={pt.y} r="1.5" fill="#00e5ff" />
-                ))}
-              </svg>
-            </div>
-          </div>
-          
-          <div className="stats-panel glass-panel">
-            <header className="panel-header">
-              <h2>Match Stats</h2>
-            </header>
-            <div className="stats-grid">
-              <div className="stat-card">
-                <span className="stat-label">Time A</span>
-                <span className="stat-value">4</span>
-              </div>
-              <div className="stat-card">
-                <span className="stat-label">Time B</span>
-                <span className="stat-value">5</span>
-              </div>
-            </div>
-          </div>
-        </aside>
       </div>
 
       <style jsx>{`

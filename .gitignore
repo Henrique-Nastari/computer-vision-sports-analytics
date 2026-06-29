@@ -1,3 +1,6 @@
-data/raw/videos/futebol_final.mp4
-data/raw/videos/futebol_rastreado.mp4
-frontend/public/videos/*.mp4
+*.mp4
+*.pt
+*.avi
+*.json
+__pycache__/
+.venv/
